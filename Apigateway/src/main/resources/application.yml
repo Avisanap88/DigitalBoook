@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: Book-Service
+        uri: //Book-Service
+        predicates:        - Path=/book/**
+      - id: Author-Service
+        uri: //Author-Service
+        predicates:        - Path=/Author/**      - id: Reader-Service
+        uri: //Reader-Service
+        predicates:
+        - Path=/reader/**                 
+          
+      
